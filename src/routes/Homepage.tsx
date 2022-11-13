@@ -4,15 +4,16 @@ import ListItem from '../components/ListItem';
 import Ship from '../components/Ship';
 
 const MainContainer = styled.main`
-  max-width: 600px;
+  max-width: 1200px;
   margin: auto;
+  margin-top: 2rem;
 `;
 
 export default function Homepage() {
   return (
     <MainContainer>
       <GridList>
-        {Array(9)
+        {Array(20)
           .fill(undefined)
           .map(() => (
             <ListItem>
