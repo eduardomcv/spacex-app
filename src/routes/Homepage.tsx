@@ -17,7 +17,7 @@ export default function Homepage() {
           .fill(undefined)
           .map(() => (
             <ListItem>
-              <Ship />
+              <Ship image="" name="ship name" />
             </ListItem>
           ))}
       </GridList>

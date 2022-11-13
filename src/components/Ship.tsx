@@ -14,11 +14,16 @@ const ShipImage = styled.img`
   height: 8rem;
 `;
 
-export default function Ship() {
+interface ShipProps {
+  name: string;
+  image: string;
+}
+
+export default function Ship({ name, image }: ShipProps) {
   return (
     <Container>
-      <ShipImage src="" alt="ship" />
-      <p>ship name</p>
+      <ShipImage src={image} alt="ship" />
+      <p>{name}</p>
     </Container>
   );
 }
