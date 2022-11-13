@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import styled from 'styled-components';
 import GridList from '../components/GridList';
 import ListItem from '../components/ListItem';
@@ -7,6 +8,7 @@ const MainContainer = styled.main`
   max-width: 1200px;
   margin: auto;
   margin-top: 2rem;
+  color: white;
 `;
 
 export default function Homepage() {
