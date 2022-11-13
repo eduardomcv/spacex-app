@@ -10,8 +10,11 @@ const Container = styled.div`
 `;
 
 const ShipImage = styled.img`
-  aspect-ratio: 1/1;
-  height: 8rem;
+  max-width: 13rem;
+`;
+
+const ShipName = styled.p`
+  text-align: center;
 `;
 
 interface ShipProps {
@@ -23,7 +26,7 @@ export default function Ship({ name, image }: ShipProps) {
   return (
     <Container>
       <ShipImage src={image} alt="ship" />
-      <p>{name}</p>
+      <ShipName>{name}</ShipName>
     </Container>
   );
 }
