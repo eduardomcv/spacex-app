@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import styled from 'styled-components';
 import GridList from '../components/GridList';
 import ListItem from '../components/ListItem';
-import Ship from '../components/Ship';
+import LaunchPreview from '../components/LaunchPreview';
 
 const MainContainer = styled.main`
   max-width: 1200px;
