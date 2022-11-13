@@ -6,12 +6,12 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid hsl(199 38% 30%);
+  border: 1px solid hsl(218 61% 20%);
   border-radius: 5%;
   aspect-ratio: 1/1;
 
   :hover {
-    background-color: hsl(199 38% 30%);
+    background-color: hsl(218 61% 20%);
   }
 `;
 
