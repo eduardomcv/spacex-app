@@ -12,6 +12,7 @@ const Container = styled.div`
 
   :hover {
     background-color: hsl(218 61% 20%);
+    cursor: pointer;
   }
 `;
 
