@@ -7,6 +7,7 @@ export default styled.button`
   border: unset;
   border-radius: 10%;
   cursor: pointer;
+  align-self: center;
 
   :hover {
     background-color: #84caff;
