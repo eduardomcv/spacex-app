@@ -15,4 +15,8 @@ export default styled.button`
   :active {
     background-color: #3396e1;
   }
+
+  :disabled {
+    cursor: not-allowed;
+  }
 `;
