@@ -18,8 +18,9 @@ export default function Homepage() {
       <GridList>
         {Array(20)
           .fill(undefined)
-          .map(() => (
-            <ListItem>
+          .map((_, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <ListItem key={index}>
               <LaunchPreview
                 launch={{
                   missionName: 'mission',
