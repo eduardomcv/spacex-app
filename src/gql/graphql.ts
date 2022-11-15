@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -985,19 +984,3 @@ export type Volume = {
   cubic_feet?: Maybe<Scalars['Int']>;
   cubic_meters?: Maybe<Scalars['Int']>;
 };
-
-export type LaunchPreviewFragmentFragment = { __typename?: 'Launch', mission_name?: string | null, rocket?: { __typename?: 'LaunchRocket', rocket_name?: string | null } | null, links?: { __typename?: 'LaunchLinks', flickr_images?: Array<string | null> | null } | null } & { ' $fragmentName'?: 'LaunchPreviewFragmentFragment' };
-
-export type LaunchesQueryQueryVariables = Exact<{
-  offset: Scalars['Int'];
-  limit: Scalars['Int'];
-}>;
-
-
-export type LaunchesQueryQuery = { __typename?: 'Query', launches?: Array<(
-    { __typename?: 'Launch' }
-    & { ' $fragmentRefs'?: { 'LaunchPreviewFragmentFragment': LaunchPreviewFragmentFragment } }
-  ) | null> | null };
-
-export const LaunchPreviewFragmentFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LaunchPreviewFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Launch"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mission_name"}},{"kind":"Field","name":{"kind":"Name","value":"rocket"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"rocket_name"}}]}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"flickr_images"}}]}}]}}]} as unknown as DocumentNode<LaunchPreviewFragmentFragment, unknown>;
-export const LaunchesQueryDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"launchesQuery"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"offset"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"limit"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"launches"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"offset"},"value":{"kind":"Variable","name":{"kind":"Name","value":"offset"}}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"Variable","name":{"kind":"Name","value":"limit"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LaunchPreviewFragment"}}]}}]}},...LaunchPreviewFragmentFragmentDoc.definitions]} as unknown as DocumentNode<LaunchesQueryQuery, LaunchesQueryQueryVariables>;
