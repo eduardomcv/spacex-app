@@ -27,16 +27,16 @@ const Text = styled.p`
 `;
 
 interface LaunchPreviewProps {
-  missionName: string;
-  rocketName: string;
-  image?: string;
+  launch: {
+    missionName: string;
+    rocketName: string;
+    image?: string;
+  };
 }
 
-export default function LaunchPreview({
-  missionName,
-  rocketName,
-  image = '',
-}: LaunchPreviewProps) {
+export default function LaunchPreview({ launch }: LaunchPreviewProps) {
+  const { missionName, rocketName, image } = launch;
+
   return (
     <Container>
       {image && <Image src={image} alt={missionName} />}

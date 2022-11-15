@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import styled from 'styled-components';
 import GridList from '../components/GridList';
 import ListItem from '../components/ListItem';
@@ -11,7 +10,6 @@ const MainContainer = styled.main`
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
 export default function Homepage() {
@@ -22,7 +20,13 @@ export default function Homepage() {
           .fill(undefined)
           .map(() => (
             <ListItem>
-              <Ship image="" name="ship name" />
+              <LaunchPreview
+                launch={{
+                  missionName: 'mission',
+                  rocketName: 'rocket',
+                  image: '',
+                }}
+              />
             </ListItem>
           ))}
       </GridList>
