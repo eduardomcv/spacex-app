@@ -9,6 +9,9 @@ const MainContainer = styled.main`
   margin: auto;
   margin-top: 2rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default function Homepage() {
