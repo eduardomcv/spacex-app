@@ -1,10 +1,10 @@
 import { createReactRouter, createRouteConfig } from '@tanstack/react-router';
-import Homepage from './Homepage';
+import LaunchesList from './LaunchesList';
 
 const routeConfig = createRouteConfig().createChildren((createRoute) => [
   createRoute({
     path: '/',
-    element: <Homepage />,
+    element: <LaunchesList />,
   }),
 ]);
 
