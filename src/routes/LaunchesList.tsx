@@ -12,7 +12,7 @@ const MainContainer = styled.main`
   flex-direction: column;
 `;
 
-export default function Homepage() {
+export default function LaunchesList() {
   return (
     <MainContainer>
       <GridList>
