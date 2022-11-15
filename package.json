@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "graphql:watch": "graphql-codegen --watch",
+    "start": "npm run graphql:watch & npm run dev"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.15.0",
