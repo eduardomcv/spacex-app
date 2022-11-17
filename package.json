@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "graphql:watch": "graphql-codegen --watch",
-    "start": "npm run graphql:watch & npm run dev"
+    "start": "concurrently npm:graphql:watch npm:dev"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.15.0",
@@ -27,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "@vitejs/plugin-react": "^2.2.0",
+    "concurrently": "^7.5.0",
     "eslint": "^8.27.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
