@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import router from '../routes/router';
+import { router } from '../routes/router';
 import SpaceXLogo from '../assets/spacex-logo.svg';
 
 const Header = styled.header`
