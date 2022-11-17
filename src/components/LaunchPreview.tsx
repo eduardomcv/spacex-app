@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { router } from '../routes/router';
 
 const Container = styled.div`
   color: white;
@@ -12,7 +13,6 @@ const Container = styled.div`
 
   :hover {
     background-color: hsl(218 61% 20%);
-    cursor: pointer;
   }
 `;
 
@@ -28,6 +28,7 @@ const Text = styled.p`
 
 interface LaunchPreviewProps {
   launch: {
+    id: string;
     missionName: string;
     rocketName: string;
     image?: string;
@@ -35,13 +36,15 @@ interface LaunchPreviewProps {
 }
 
 export default function LaunchPreview({ launch }: LaunchPreviewProps) {
-  const { missionName, rocketName, image } = launch;
+  const { id, missionName, rocketName, image } = launch;
 
   return (
-    <Container>
-      {image && <Image src={image} alt={missionName} />}
-      <Text>Mission: {missionName}</Text>
-      <Text>Rocket: {rocketName}</Text>
-    </Container>
+    <router.Link search={{ id }} to="/launch">
+      <Container>
+        {image && <Image src={image} alt={missionName} />}
+        <Text>Mission: {missionName}</Text>
+        <Text>Rocket: {rocketName}</Text>
+      </Container>
+    </router.Link>
   );
 }
