@@ -4,12 +4,11 @@ import ListItem from '../components/ListItem';
 import LaunchPreview from '../components/LaunchPreview';
 
 const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
   max-width: 1200px;
   margin: auto;
   margin-top: 2rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
 `;
 
 export default function LaunchesList() {
@@ -23,6 +22,7 @@ export default function LaunchesList() {
             <ListItem key={index}>
               <LaunchPreview
                 launch={{
+                  id: `${index}`,
                   missionName: 'mission',
                   rocketName: 'rocket',
                   image: '',
