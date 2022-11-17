@@ -1,11 +1,16 @@
 import { createReactRouter, createRouteConfig } from '@tanstack/react-router';
+import Launch from './Launch';
 import LaunchesList from './LaunchesList';
 
 const routeConfig = createRouteConfig().createChildren((createRoute) => [
   createRoute({
     path: '/',
-    element: <LaunchesList />,
+    component: LaunchesList,
+  }),
+  createRoute({
+    path: '/launch',
+    component: Launch,
   }),
 ]);
 
-export default createReactRouter({ routeConfig });
+export const router = createReactRouter({ routeConfig });
