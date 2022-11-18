@@ -23,5 +23,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
   },
 };
