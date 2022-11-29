@@ -26,13 +26,15 @@ const Text = styled.p`
   margin: 1rem 0 0 0;
 `;
 
+interface Launch {
+  id: string;
+  missionName: string;
+  rocketName: string;
+  image?: string;
+}
+
 interface LaunchPreviewProps {
-  launch: {
-    id: string;
-    missionName: string;
-    rocketName: string;
-    image?: string;
-  };
+  launch: Launch;
 }
 
 export default function LaunchPreview({ launch }: LaunchPreviewProps) {
