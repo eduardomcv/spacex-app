@@ -9,6 +9,7 @@ const MainContainer = styled.main`
   max-width: 1200px;
   margin: auto;
   margin-top: 2rem;
+  padding: 0 2rem;
 `;
 
 export default function LaunchesList() {
